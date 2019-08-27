@@ -9,3 +9,14 @@ C:\Users\victo\Documents\INTEC\Trimestre 13\Administración de la Configuración
 C:\Users\victo\Documents\INTEC\Trimestre 13\Administración de la Configuración\Practica CI\adm-config-ci\CIPractice\ConfigurationItemsPractice\obj\Debug\netcoreapp2.2\ConfigurationItemsPractice.AssemblyInfo.cs
 C:\Users\victo\Documents\INTEC\Trimestre 13\Administración de la Configuración\Practica CI\adm-config-ci\CIPractice\ConfigurationItemsPractice\obj\Debug\netcoreapp2.2\ConfigurationItemsPractice.dll
 C:\Users\victo\Documents\INTEC\Trimestre 13\Administración de la Configuración\Practica CI\adm-config-ci\CIPractice\ConfigurationItemsPractice\obj\Debug\netcoreapp2.2\ConfigurationItemsPractice.pdb
+C:\Users\User\Documents\adm-config-ci\CIPractice\ConfigurationItemsPractice\bin\Debug\netcoreapp2.2\ConfigurationItemsPractice.deps.json
+C:\Users\User\Documents\adm-config-ci\CIPractice\ConfigurationItemsPractice\bin\Debug\netcoreapp2.2\ConfigurationItemsPractice.runtimeconfig.json
+C:\Users\User\Documents\adm-config-ci\CIPractice\ConfigurationItemsPractice\bin\Debug\netcoreapp2.2\ConfigurationItemsPractice.runtimeconfig.dev.json
+C:\Users\User\Documents\adm-config-ci\CIPractice\ConfigurationItemsPractice\bin\Debug\netcoreapp2.2\ConfigurationItemsPractice.dll
+C:\Users\User\Documents\adm-config-ci\CIPractice\ConfigurationItemsPractice\bin\Debug\netcoreapp2.2\ConfigurationItemsPractice.pdb
+C:\Users\User\Documents\adm-config-ci\CIPractice\ConfigurationItemsPractice\obj\Debug\netcoreapp2.2\ConfigurationItemsPractice.csprojAssemblyReference.cache
+C:\Users\User\Documents\adm-config-ci\CIPractice\ConfigurationItemsPractice\obj\Debug\netcoreapp2.2\ConfigurationItemsPractice.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\adm-config-ci\CIPractice\ConfigurationItemsPractice\obj\Debug\netcoreapp2.2\ConfigurationItemsPractice.AssemblyInfoInputs.cache
+C:\Users\User\Documents\adm-config-ci\CIPractice\ConfigurationItemsPractice\obj\Debug\netcoreapp2.2\ConfigurationItemsPractice.AssemblyInfo.cs
+C:\Users\User\Documents\adm-config-ci\CIPractice\ConfigurationItemsPractice\obj\Debug\netcoreapp2.2\ConfigurationItemsPractice.dll
+C:\Users\User\Documents\adm-config-ci\CIPractice\ConfigurationItemsPractice\obj\Debug\netcoreapp2.2\ConfigurationItemsPractice.pdb
