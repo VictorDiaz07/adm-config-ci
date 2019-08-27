@@ -1,5 +1,4 @@
-Klk|23213|,1,4
-IntelIJ|23213
+IntelIJ|23213|
 VSk|23213
-SQL Server|4.3.5|,
-Windows Server 2016 R2|5.3.0
+SQL Server|4.3.5|,,,,0,3
+Windows Server 2016 R2|5.3.0|2
