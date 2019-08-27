@@ -1,3 +1,3 @@
-Klk | 23213 | 
-SQL Server | 12.2.1 | 
-Windows Server 2012 | 2.3.2 | 
+Klk|23213
+IntelIJ|23213
+VSk|23213|1,
