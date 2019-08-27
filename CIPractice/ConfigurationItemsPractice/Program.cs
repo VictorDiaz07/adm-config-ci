@@ -37,7 +37,7 @@ namespace ConfigurationItemsPractice
 
         private static void ExitProgram()
         {
-
+			Console.WriteLine("Gracias por utilizar nuestro programa. ");
         }
 
         private static void ConfigureDependencies()
@@ -61,17 +61,64 @@ namespace ConfigurationItemsPractice
 
             if (option == 2)
             {
-                Console.WriteLine("Escoja el CI cuya dependencia desea eliminar");
-                GetDependencies(selectedCi);
-                int dependantCi = int.Parse(Console.ReadLine());
-                ConfigureDependency(selectedCi, dependantCi, option);
+				if (HasDependencies(selectedCi))
+				{
+					Console.WriteLine("Escoja el CI cuya dependencia desea eliminar");
+					GetDependencies(selectedCi);
+					int dependantCi = int.Parse(Console.ReadLine());
+					ConfigureDependency(selectedCi, dependantCi, option);
+				}
+				else
+				{
+					Console.WriteLine("El CI seleccionado no posee dependencias. ");
+					Console.WriteLine("Presione Enter para volver al menú");
+					Console.ReadLine();
+					StartupMenu();
+				}
+                
 
             }
 
         }
 
-        private static void GetDependencies(int selectedCi)
+		private static bool HasDependencies(int selectedCi)
+		{
+			string[] registeredCIs = File.ReadAllLines("CI.txt");
+			var ci = registeredCIs[selectedCi];
+			int counter = 0;
+			if(ci.Split("|").Length == 2)
+			{
+				return true;
+			}
+			else
+			{
+				var dependencies = ci.Split("|")[2].Split(',').ToList();
+
+				foreach (var dependency in dependencies)
+				{
+					if (string.IsNullOrWhiteSpace(dependency))
+					{
+						continue;
+					}
+					else
+					{
+						counter++;
+					}
+				}
+				if (counter == 0)
+				{
+					return false;
+				}
+				else
+				{
+					return true;
+				}
+			}
+		}
+
+		private static void GetDependencies(int selectedCi)
         {
+			int counter = 0;
             if (File.Exists("CI.txt"))
             {
                 string[] registeredCis = File.ReadAllLines("CI.txt");
@@ -84,15 +131,23 @@ namespace ConfigurationItemsPractice
                 }
                 else
                 {
-
                     var dependencies = ci.Split("|")[2].Split(',').ToList();
 
                     foreach (var dependency in dependencies)
                     {
+						if (string.IsNullOrWhiteSpace(dependency))
+						{
+							continue;
+						}
                         var Name = registeredCis[int.Parse(dependency)].Split('|')[0];
                         Console.WriteLine(dependency + ". " + Name);
+						counter++;
 
                     }
+					if (counter == 0)
+					{
+						Console.WriteLine("No hay dependencias configuradas. ");
+					}
                 }
                
             }
@@ -228,6 +283,8 @@ namespace ConfigurationItemsPractice
                 sw.WriteLine(CiInfo.Name + "|" + ciVersion);
                 sw.Close();
             }
+			Console.Clear(); 
+			StartupMenu();
         }
 
         static void Main(string[] args)

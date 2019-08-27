@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\victo\\Documents\\INTEC\\Trimestre 13\\Administración de la Configuración\\Practica CI\\adm-config-ci\\CIPractice\\ConfigurationItemsPractice\\ConfigurationItemsPractice.csproj": {}
+    "C:\\Users\\User\\Documents\\adm-config-ci\\CIPractice\\ConfigurationItemsPractice\\ConfigurationItemsPractice.csproj": {}
   },
   "projects": {
-    "C:\\Users\\victo\\Documents\\INTEC\\Trimestre 13\\Administración de la Configuración\\Practica CI\\adm-config-ci\\CIPractice\\ConfigurationItemsPractice\\ConfigurationItemsPractice.csproj": {
+    "C:\\Users\\User\\Documents\\adm-config-ci\\CIPractice\\ConfigurationItemsPractice\\ConfigurationItemsPractice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\victo\\Documents\\INTEC\\Trimestre 13\\Administración de la Configuración\\Practica CI\\adm-config-ci\\CIPractice\\ConfigurationItemsPractice\\ConfigurationItemsPractice.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\adm-config-ci\\CIPractice\\ConfigurationItemsPractice\\ConfigurationItemsPractice.csproj",
         "projectName": "ConfigurationItemsPractice",
-        "projectPath": "C:\\Users\\victo\\Documents\\INTEC\\Trimestre 13\\Administración de la Configuración\\Practica CI\\adm-config-ci\\CIPractice\\ConfigurationItemsPractice\\ConfigurationItemsPractice.csproj",
-        "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\victo\\Documents\\INTEC\\Trimestre 13\\Administración de la Configuración\\Practica CI\\adm-config-ci\\CIPractice\\ConfigurationItemsPractice\\obj\\",
+        "projectPath": "C:\\Users\\User\\Documents\\adm-config-ci\\CIPractice\\ConfigurationItemsPractice\\ConfigurationItemsPractice.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\adm-config-ci\\CIPractice\\ConfigurationItemsPractice\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
