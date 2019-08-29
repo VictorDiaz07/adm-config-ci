@@ -15,7 +15,8 @@ namespace ConfigurationItemsPractice
             Console.WriteLine("Opcion 2: Ver CIs registrados");
             Console.WriteLine("Opcion 3: Configurar dependencias");
 			Console.WriteLine("Opcion 4: Modificar CI");
-            Console.WriteLine("Opcion 5: Salir");
+			Console.WriteLine("Opcion 5: Listar dependencias");
+            Console.WriteLine("Opcion 6: Salir");
             Console.Write("Inserte una de las siguientes opciones para continuar: ");
             string choosedOption = Console.ReadLine();
             option = int.Parse(choosedOption);
@@ -33,11 +34,28 @@ namespace ConfigurationItemsPractice
 				case 4:
 					ModifyCI();
 					break;
-                case 5:
+				case 5:
+					GetAllDependencies();
+					break;
+                case 6:
                     ExitProgram();
                     break;
             }
         }
+
+		private static void GetAllDependencies()
+		{
+			string[] registeredCis = File.ReadAllLines("CI.txt");
+			for (int i = 0; i < registeredCis.Length; i++)
+			{
+				var configurationItem = GetSpecificCI(i);
+				Console.WriteLine(configurationItem.Name + " " + configurationItem.Version);
+				GetDependencies(i);
+			}
+			Console.WriteLine("Presione cualquier tecla para regresar al menu");
+			Console.ReadLine();
+			StartupMenu();
+		}
 
 		private static void ModifyCI()
 		{
@@ -59,7 +77,7 @@ namespace ConfigurationItemsPractice
 					CheckDeprecationImpact(configurationItem, selectedCI);
 					break;
 				case 2:
-					CheckUpgradeImpact(configurationItem);
+					CheckUpgradeImpact(configurationItem, selectedCI);
 					break;
 			}
 		}
@@ -85,7 +103,7 @@ namespace ConfigurationItemsPractice
 			return null;
 		}
 
-		private static void CheckUpgradeImpact(ConfigurationItem configurationItem)
+		private static void CheckUpgradeImpact(ConfigurationItem configurationItem, int selectedCI)
 		{
 			Console.Clear();
 			Console.Write("Introduzca la version a la que desea actualizar este CI: ");
@@ -100,6 +118,8 @@ namespace ConfigurationItemsPractice
 					Console.WriteLine($"El cambio al CI de nombre {configurationItem.Name} con numero de version actual" +
 						$" {configurationItem.Version} es de gran impacto porque es una actualizacion a gran escala.");
 					Console.WriteLine($"Se desea cambiar de {configurationItem.Version} a {newVersion}");
+					Console.WriteLine($"En caso de hacer esta actualizacion, se verian afectados los siguientes programas: ");
+					GetDependencies(selectedCI);
 					Console.ReadLine();
 					return;
 				}
